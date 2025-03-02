@@ -39,3 +39,4 @@ static TextTheme dark = TextTheme(
   labelMedium: const TextStyle().copyWith(fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.white.withAlpha(228)),
 ); 
 }
+ 

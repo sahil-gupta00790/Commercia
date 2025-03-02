@@ -1,3 +1,4 @@
+import 'package:commercia/utilities/constants/colors.dart';
 import 'package:commercia/utilities/themes/widget/appbar_theme.dart';
 import 'package:commercia/utilities/themes/widget/bottom_sheet_theme.dart';
 import 'package:commercia/utilities/themes/widget/checkbox_theme.dart';
@@ -14,8 +15,9 @@ class AppTheme{
   static ThemeData lightTheme=ThemeData(
     useMaterial3: true,
     fontFamily: 'Poppins',
+    disabledColor: AppColors.grey,
     brightness: Brightness.light,
-    primaryColor: Colors.orange,
+    primaryColor: Color(0XFFFF8000),
     scaffoldBackgroundColor: Colors.white,
     textTheme: AppTextTheme.light,
     chipTheme: AppChipTheme.light,
@@ -30,8 +32,9 @@ class AppTheme{
     useMaterial3: true,
     fontFamily: 'Poppins',
     brightness: Brightness.dark,
-    primaryColor: Colors.orange,
-    scaffoldBackgroundColor: Colors.white,
+    disabledColor: AppColors.grey,
+    primaryColor: Color(0XFFFF8000),
+    scaffoldBackgroundColor: Colors.black,
     textTheme: AppTextTheme.dark,
     chipTheme: AppChipTheme.dark,
     appBarTheme: AppAppBarTheme.dark,
