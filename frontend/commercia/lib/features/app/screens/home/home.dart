@@ -1,5 +1,7 @@
 import 'package:commercia/common/widgets/custom_shapes/container/primary_header_container.dart';
 import 'package:commercia/common/widgets/custom_shapes/container/search_container.dart';
+import 'package:commercia/common/widgets/layout/grid_layout.dart';
+import 'package:commercia/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:commercia/common/widgets/texts/section_heading.dart';
 import 'package:commercia/features/app/screens/home/widgets/home_appbar.dart';
 import 'package:commercia/features/app/screens/home/widgets/home_categories.dart';
@@ -46,7 +48,25 @@ class HomeScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(AppSizes.defaultSpace),
-              child: AppPromoSlider(banners: [AppImages.banner1,AppImages.banner2,AppImages.banner3],),
+              child: Column(
+                children: [
+                  AppPromoSlider(
+                    banners: [
+                      AppImages.banner1,
+                      AppImages.banner2,
+                      AppImages.banner3
+                    ],
+                  ),
+                  const SizedBox(
+                    height: AppSizes.spaceBtwSections,
+                  ),
+                  AppSectionHeading(title: 'Popular Products'),
+                  const SizedBox(
+                    height: AppSizes.spaceBtwSections,
+                  ),
+                  AppGridLayout(itemCount: 4,itemBuilder: (_,index)=>const AppProductCardVertical(),),
+                ],
+              ),
             ),
           ],
         ),
@@ -54,3 +74,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+

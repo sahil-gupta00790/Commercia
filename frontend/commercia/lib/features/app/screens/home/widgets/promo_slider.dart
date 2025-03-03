@@ -3,7 +3,6 @@ import 'package:commercia/common/widgets/custom_shapes/container/circular_contai
 import 'package:commercia/common/widgets/images/app_rounded_image.dart';
 import 'package:commercia/features/app/controller/home_controller.dart';
 import 'package:commercia/utilities/constants/colors.dart';
-import 'package:commercia/utilities/constants/image_strings.dart';
 import 'package:commercia/utilities/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,7 +26,7 @@ class AppPromoSlider extends StatelessWidget {
             viewportFraction: 1,
             onPageChanged: (index, _) => controller.updateIndicator(index),
           ),
-          items: banners.map((e) => const AppRoundedImage(imageUrl:AppImages.banner1)).toList(),
+          items: banners.map((e) => AppRoundedImage(imageUrl:e)).toList(),
         ),
         const SizedBox(height: AppSizes.spaceBtwItems,),
         Obx(
