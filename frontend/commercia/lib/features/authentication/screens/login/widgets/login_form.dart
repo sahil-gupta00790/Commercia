@@ -1,4 +1,6 @@
+import 'package:commercia/features/authentication/screens/password_reconfiguration/forgot_password.dart';
 import 'package:commercia/features/authentication/screens/signup/signup.dart';
+import 'package:commercia/navigation_menu.dart';
 import 'package:commercia/utilities/constants/sizes.dart';
 import 'package:commercia/utilities/constants/text_strings.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +50,7 @@ class AppLoginForm extends StatelessWidget {
                   ],
                 ),
                 TextButton(
-                    onPressed: () {},
+                    onPressed: ()=>Get.to(()=>const ForgotPassword()),
                     child: const Text(AppTexts.forgetPassword))
               ],
             ),
@@ -59,7 +61,7 @@ class AppLoginForm extends StatelessWidget {
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: ()=>Get.to(()=>NavigationMenu()),
                     child: const Text(AppTexts.signIn))),
             const SizedBox(
               height: AppSizes.spaceBtwItems,
