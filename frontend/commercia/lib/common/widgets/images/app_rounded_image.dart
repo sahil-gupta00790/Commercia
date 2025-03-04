@@ -1,4 +1,4 @@
-import 'package:commercia/utilities/constants/colors.dart';
+//import 'package:commercia/utilities/constants/colors.dart';
 import 'package:commercia/utilities/constants/sizes.dart';
 import 'package:flutter/material.dart';
 

@@ -1,4 +1,6 @@
 import 'package:commercia/features/app/screens/home/home.dart';
+import 'package:commercia/features/app/screens/store/store.dart';
+import 'package:commercia/features/app/screens/wishlist/wishlist.dart';
 import 'package:commercia/utilities/constants/colors.dart';
 import 'package:commercia/utilities/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -37,6 +39,6 @@ class NavigationMenu extends StatelessWidget {
 class NavigationController extends GetxController{
   final Rx<int> selectedIndex=0.obs;
 
-  final screens=[const HomeScreen(),Container(color: Colors.blue,),Container(color: Colors.orange,),Container(color: Colors.yellow,)];
+  final screens=[const HomeScreen(),const StoreScreen(),const FavouriteScreen(),Container(color: Colors.yellow,)];
 
 }

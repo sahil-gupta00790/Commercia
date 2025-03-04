@@ -9,7 +9,7 @@ class AppVertialImageText extends StatelessWidget {
     super.key,
     required this.image,
     required this.title,
-    this.backgroundColor=AppColors.white,
+    this.backgroundColor,
     this.textColor=AppColors.white,
     this.onTap,
   });

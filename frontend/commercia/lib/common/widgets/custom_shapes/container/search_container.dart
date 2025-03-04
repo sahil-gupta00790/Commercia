@@ -7,20 +7,20 @@ import 'package:iconsax/iconsax.dart';
 
 class AppSearchContainer extends StatelessWidget {
   const AppSearchContainer({
-    super.key, required this.text, this.icon=Iconsax.search_normal, this.showBackground=true, this.showBorder=true, this.onTap,
+    super.key, required this.text, this.icon=Iconsax.search_normal, this.showBackground=true, this.showBorder=true, this.onTap, this.padding=const EdgeInsets.symmetric(horizontal: AppSizes.defaultSpace),
   });
   final String text;
   final IconData? icon;
   final bool showBackground,showBorder;
   final VoidCallback? onTap;
-
+  final EdgeInsetsGeometry padding;
   @override
   Widget build(BuildContext context) {
     final dark=AppHelperFunctions.isDarkMode(context);
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: AppSizes.buttonRadius),
+        padding: padding,
         child: Container(
           width: AppDeviceUtils.getScreenWidth(context),
           padding: const EdgeInsets.all(AppSizes.md),
@@ -34,7 +34,7 @@ class AppSearchContainer extends StatelessWidget {
             children: [
               Icon(Iconsax.search_normal,color: AppColors.darkerGrey,),
               const SizedBox(width: AppSizes.spaceBtwItems,),
-              Text('Search in Store',style: Theme.of(context).textTheme.bodySmall,)
+              Text(text,style: Theme.of(context).textTheme.bodySmall,)
             ],
           ),
         ),

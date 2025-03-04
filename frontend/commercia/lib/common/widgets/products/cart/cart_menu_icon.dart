@@ -1,22 +1,24 @@
 import 'package:commercia/utilities/constants/colors.dart';
+import 'package:commercia/utilities/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 class AppCartCounterWidget extends StatelessWidget {
   const AppCartCounterWidget({
-    super.key, required this.onPressed,required this.iconColor,
+    super.key, required this.onPressed,this.iconColor,
   });
   final VoidCallback onPressed;
-  final Color iconColor;
+  final Color? iconColor;
   @override
   Widget build(BuildContext context) {
+    final dark=AppHelperFunctions.isDarkMode(context);
     return Stack(
       children: [
         IconButton(
           onPressed: onPressed,
           icon: Icon(
             Iconsax.shopping_bag,
-            color: iconColor,
+            color: iconColor ?? (dark?AppColors.white:AppColors.black),
           ),
         ),
         Positioned(

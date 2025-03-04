@@ -2,6 +2,7 @@ import 'package:commercia/common/styles/shadows.dart';
 import 'package:commercia/common/widgets/custom_shapes/container/rounded_container.dart';
 import 'package:commercia/common/widgets/icons/app_circular_icon.dart';
 import 'package:commercia/common/widgets/images/app_rounded_image.dart';
+import 'package:commercia/common/widgets/texts/app_brand_title_text_with_verified_design.dart';
 import 'package:commercia/common/widgets/texts/product_price_text.dart';
 import 'package:commercia/common/widgets/texts/product_title_text.dart';
 import 'package:commercia/utilities/constants/colors.dart';
@@ -83,20 +84,8 @@ class AppProductCardVertical extends StatelessWidget {
                   const SizedBox(
                     height: AppSizes.spaceBtwItems / 2,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(
-                        width: AppSizes.xs,
-                      ),
-                      Icon(Iconsax.verify5,
-                          color: Colors.blue, size: AppSizes.iconXs),
-                    ],
+                  AppBrandTitleTextWithVerifiedIcon(
+                    title: 'Nike',
                   ),
                   
                 ],
@@ -137,4 +126,5 @@ class AppProductCardVertical extends StatelessWidget {
     );
   }
 }
+
 
