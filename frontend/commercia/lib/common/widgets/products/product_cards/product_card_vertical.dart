@@ -5,11 +5,13 @@ import 'package:commercia/common/widgets/images/app_rounded_image.dart';
 import 'package:commercia/common/widgets/texts/app_brand_title_text_with_verified_design.dart';
 import 'package:commercia/common/widgets/texts/product_price_text.dart';
 import 'package:commercia/common/widgets/texts/product_title_text.dart';
+import 'package:commercia/features/app/screens/product_details/product_details.dart';
 import 'package:commercia/utilities/constants/colors.dart';
 import 'package:commercia/utilities/constants/image_strings.dart';
 import 'package:commercia/utilities/constants/sizes.dart';
 import 'package:commercia/utilities/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class AppProductCardVertical extends StatelessWidget {
@@ -19,7 +21,7 @@ class AppProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = AppHelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: ()=>Get.to(()=>const ProductDetail()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),

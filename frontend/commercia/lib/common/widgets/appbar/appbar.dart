@@ -1,5 +1,7 @@
+import 'package:commercia/utilities/constants/colors.dart';
 import 'package:commercia/utilities/constants/sizes.dart';
 import 'package:commercia/utilities/device/device_utility.dart';
+import 'package:commercia/utilities/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -25,7 +27,7 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
         automaticallyImplyLeading: showBackArrow,
         leading: showBackArrow
             ? IconButton(
-                onPressed: () => Get.back(), icon: Icon(Iconsax.arrow_left))
+                onPressed: () => Get.back(), icon: Icon(Iconsax.arrow_left),color: AppHelperFunctions.isDarkMode(context)?AppColors.white:AppColors.black,)
             : leadingIcon != null
                 ? IconButton(
                     onPressed: leadingOnPressed,

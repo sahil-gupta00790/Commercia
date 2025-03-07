@@ -1,5 +1,4 @@
 import 'package:commercia/utilities/constants/colors.dart';
-import 'package:commercia/utilities/constants/image_strings.dart';
 import 'package:commercia/utilities/constants/sizes.dart';
 import 'package:commercia/utilities/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +37,7 @@ class AppCircularImage extends StatelessWidget {
       ),
       child: Image(
         fit: boxFit,
-        image:isNetworkImage?NetworkImage(image):AssetImage(AppImages.clothIcon),
+        image:isNetworkImage?NetworkImage(image):AssetImage(image),
         color: overlayColor,
       ),
     );
