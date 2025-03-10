@@ -31,6 +31,7 @@ dependencies:
 
   #product specific
   readmore: ^2.2.0
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   flutter_test:
@@ -48,6 +49,7 @@ flutter:
     - assets/images/banners/
     - assets/images/products/
     - assets/images/user/
+    - assets/images/reviews/
 
 
   fonts:

@@ -4,10 +4,10 @@ import 'package:commercia/features/app/screens/product_details/widgets/product_a
 import 'package:commercia/features/app/screens/product_details/widgets/product_details_image_slider.dart';
 import 'package:commercia/features/app/screens/product_details/widgets/product_meta_data.dart';
 import 'package:commercia/features/app/screens/product_details/widgets/rating_share_widget.dart';
+import 'package:commercia/features/app/screens/product_reviews/product_reviews.dart';
 import 'package:commercia/utilities/constants/sizes.dart';
-import 'package:commercia/utilities/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
 
@@ -64,7 +64,7 @@ class ProductDetail extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       AppSectionHeading(title: 'Reviews(199)',onPressed: (){},showActionsButton: false,),
-                      IconButton(onPressed: (){}, icon: Icon(Iconsax.arrow_right_3))
+                      IconButton(onPressed: ()=>Get.to(()=>ProductReviewsScreen()), icon: Icon(Iconsax.arrow_right_3))
                     ],
                   ),
                   SizedBox(height: AppSizes.spaceBtwSections,),
