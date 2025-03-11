@@ -1,6 +1,8 @@
+import 'package:commercia/features/app/screens/cart/cart.dart';
 import 'package:commercia/utilities/constants/colors.dart';
 import 'package:commercia/utilities/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class AppCartCounterWidget extends StatelessWidget {
@@ -15,7 +17,7 @@ class AppCartCounterWidget extends StatelessWidget {
     return Stack(
       children: [
         IconButton(
-          onPressed: onPressed,
+          onPressed: ()=>Get.to(()=>CartScreen()),
           icon: Icon(
             Iconsax.shopping_bag,
             color: iconColor ?? (dark?AppColors.white:AppColors.black),

@@ -3,6 +3,7 @@ import 'package:commercia/common/widgets/custom_shapes/container/primary_header_
 import 'package:commercia/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:commercia/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:commercia/common/widgets/texts/section_heading.dart';
+import 'package:commercia/features/personalization/screens/address/address.dart';
 import 'package:commercia/features/personalization/screens/profile/profile.dart';
 import 'package:commercia/utilities/constants/colors.dart';
 import 'package:commercia/utilities/constants/sizes.dart';
@@ -56,6 +57,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.safe_home,
                     title: 'My Addresses',
                     subtitle: 'Set shopping delivery address',
+                    onTap: () => Get.to(()=>UserAddressScreen()),
                   ),
                   AppSettingsMenuTile(
                       icon: Iconsax.shopping_cart,
