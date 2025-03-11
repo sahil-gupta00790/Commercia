@@ -50,6 +50,7 @@ flutter:
     - assets/images/products/
     - assets/images/user/
     - assets/images/reviews/
+    - assets/images/payment_methods/
 
 
   fonts:

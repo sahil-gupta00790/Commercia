@@ -133,4 +133,7 @@ class AppImages {
   static const String userProfileImage2="assets/images/reviews/review_profile_image_2.jpg";
   static const String userProfileImage3="assets/images/reviews/review_profile_image_3.jpg";
 
+  static const String googlePay="assets/images/payment_methods/google_pay.png";
+  static const String paytm="assets/images/payment_methods/paytm.png";
+  static const String paymentSuccessful="assets/images/payment_methods/payment_successful.mp4";
 }

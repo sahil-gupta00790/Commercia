@@ -3,6 +3,7 @@ import 'package:commercia/common/widgets/custom_shapes/container/primary_header_
 import 'package:commercia/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:commercia/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:commercia/common/widgets/texts/section_heading.dart';
+import 'package:commercia/features/app/screens/order/order.dart';
 import 'package:commercia/features/personalization/screens/address/address.dart';
 import 'package:commercia/features/personalization/screens/profile/profile.dart';
 import 'package:commercia/utilities/constants/colors.dart';
@@ -66,7 +67,8 @@ class SettingsScreen extends StatelessWidget {
                   AppSettingsMenuTile(
                       icon: Iconsax.bag_tick,
                       title: 'My Orders',
-                      subtitle: 'In-progress and Completed Orders'),
+                      subtitle: 'In-progress and Completed Orders',
+                      onTap:()=>Get.to(()=>OrderScreen()),),
                   AppSettingsMenuTile(
                       icon: Iconsax.bank,
                       title: 'Bank Account',

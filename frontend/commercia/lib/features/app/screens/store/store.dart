@@ -5,11 +5,13 @@ import 'package:commercia/common/widgets/layout/grid_layout.dart';
 import 'package:commercia/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:commercia/common/widgets/brands/brand_card.dart';
 import 'package:commercia/common/widgets/texts/section_heading.dart';
+import 'package:commercia/features/app/screens/brand/all_brands.dart';
 import 'package:commercia/features/app/screens/store/widget/category_tab.dart';
 import 'package:commercia/utilities/constants/colors.dart';
 import 'package:commercia/utilities/constants/sizes.dart';
 import 'package:commercia/utilities/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
@@ -54,7 +56,7 @@ class StoreScreen extends StatelessWidget {
                         ),
                         AppSectionHeading(
                           title: 'Featured Brands',
-                          onPressed: () {},
+                          onPressed: ()=>Get.to(()=>AllBrandsScreen()),
                         ),
                         SizedBox(
                           height: AppSizes.spaceBtwItems / 2,

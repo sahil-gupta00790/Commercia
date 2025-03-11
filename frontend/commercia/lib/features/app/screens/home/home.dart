@@ -3,6 +3,7 @@ import 'package:commercia/common/widgets/custom_shapes/container/search_containe
 import 'package:commercia/common/widgets/layout/grid_layout.dart';
 import 'package:commercia/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:commercia/common/widgets/texts/section_heading.dart';
+import 'package:commercia/features/app/screens/all_products/all_products.dart';
 import 'package:commercia/features/app/screens/home/widgets/home_appbar.dart';
 import 'package:commercia/features/app/screens/home/widgets/home_categories.dart';
 import 'package:commercia/features/app/screens/home/widgets/promo_slider.dart';
@@ -10,6 +11,7 @@ import 'package:commercia/utilities/constants/image_strings.dart';
 
 import 'package:commercia/utilities/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -61,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(
                     height: AppSizes.spaceBtwSections,
                   ),
-                  AppSectionHeading(title: 'Popular Products'),
+                  AppSectionHeading(title: 'Popular Products',onPressed: ()=>Get.to(()=>AllProducts()),),
                   const SizedBox(
                     height: AppSizes.spaceBtwSections,
                   ),

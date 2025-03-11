@@ -8,7 +8,7 @@ class AppCircularIcon extends StatelessWidget {
     super.key,
     this.width,
     this.height,
-    this.size=AppSizes.lg,
+    this.size=AppSizes.md,
     required this.icon,
     this.color,
     this.backgroundColor,

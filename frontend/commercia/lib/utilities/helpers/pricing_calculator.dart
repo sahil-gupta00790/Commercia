@@ -28,7 +28,7 @@ class AppPricingCalculator {
   static double getTaxRateForLocation(String location) {
   // Lookup the tax rate for the given location from a tax rate database or API.
   // Return the appropriate tax rate.
-  return 0.10; // Example tax rate of 10%
+  return 0.30; // Example tax rate of 10%
   }
 
   static double getShippingCost(String location) {
